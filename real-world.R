@@ -46,7 +46,7 @@ results$method <- list("naive",
 
 # do the analysis for all dataframes and tests
 
-temp_result <- max_chisq_test(data_hyper_itt, alternative = "two.sided")
+temp_result <- max.chisq.test(data_hyper_itt, alternative = "two.sided")
 results$hyperkalemia_itt <- list(temp_result[2],
                                  temp_result[2] * 3,
                                  chisq.test(data_hyper_itt, correct = FALSE)$p.value,
@@ -57,7 +57,7 @@ results$hyperkalemia_itt <- list(temp_result[2],
 asymptotic_hyper_itt <- binMto(n = nobs_itt, x = hyperkalemia_itt)$conf.int
 
 
-temp_result <- max_chisq_test(data_hyper_ast, alternative = "two.sided")
+temp_result <- max.chisq.test(data_hyper_ast, alternative = "two.sided")
 results$hyperkalemia_ast <- list(temp_result[2],
                                  temp_result[2] * 3,
                                  chisq.test(data_hyper_ast, correct = FALSE)$p.value,
@@ -67,7 +67,7 @@ results$hyperkalemia_ast <- list(temp_result[2],
 asymptotic_hyper_ast <- binMto(n = nobs_ast, x = hyperkalemia_ast)$conf.int
 
 
-temp_result <- max_chisq_test(data_hypo_itt, alternative = "two.sided")
+temp_result <- max.chisq.test(data_hypo_itt, alternative = "two.sided")
 results$hypotension_itt <- list(temp_result[2],
                                  temp_result[2] * 3,
                                  chisq.test(data_hypo_itt, correct = FALSE)$p.value,
@@ -76,7 +76,7 @@ results$hypotension_itt <- list(temp_result[2],
                                  calculate_exact_uncond_p_value(data_hypo_itt))
 asymptotic_hypo_itt <- binMto(n = nobs_itt, x = hypotension_itt)$conf.int
 
-temp_result <- max_chisq_test(data_hypo_ast, alternative = "two.sided")
+temp_result <- max.chisq.test(data_hypo_ast, alternative = "two.sided")
 results$hypotension_ast <- list(temp_result[2],
                                 temp_result[2] * 3,
                                 chisq.test(data_hypo_ast, correct = FALSE)$p.value,
