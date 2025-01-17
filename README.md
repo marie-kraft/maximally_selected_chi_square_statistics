@@ -20,3 +20,23 @@ world multi-dose trial. Simulation results show that conditional methods based o
 the flexible exact framework outperform other approaches in accurately analyzing
 studies with multiple treatment arms and binary outcomes, making them particu-
 larly suitable for multi-dose and dose-finding trials with small sample sizes.
+
+
+## How to work with these files:
+full function.R provides the function max.chisq.test to get the p_value for the flexible
+conditional χ2_max
+uncontiional_exact_test is the implemented Version of the unconditional exact test for
+a test statistic with unpooled variance estimation by Koch and Hothorn (1999)
+
+To recreate the simulation, run the runsim.R document, but leave the conditional exact test out
+Afterwards run add_conditional_test.R
+Alternatively the simulation results are safed in Simulation_results/
+To get the results and plots run results.R and get_results.R
+
+To recreate the results of the real-world example, run real-world.R
+
+
+Koch, H.-F. and Hothorn, L. A. (1999). Exact unconditional distributions for dichoto-
+mous data in many-to-one comparisons, Journal of Statistical Planning and Inference
+82(1): 83–99.
+URL: https://www.sciencedirect.com/science/article/pii/S0378375899000336
