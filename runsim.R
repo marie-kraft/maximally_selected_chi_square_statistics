@@ -52,7 +52,7 @@ onerep <- function(repetition, nobs = c(100, 100), probs = c(0.5, 0.5)) {
   
   # Apply methods on contingency table
   # function for flexible exact approach
-  test_object <- max_chisq_test(contingency_table, trace = FALSE)
+  test_object <- max.chisq.test(contingency_table, trace = FALSE)
   our_decision <- ifelse(test_object[1] <= 0.05, "reject", "cant reject")
   # naive chi-square test
   basic_decision <- ifelse(test_object[2] <= 0.05, "reject", "cant reject")
